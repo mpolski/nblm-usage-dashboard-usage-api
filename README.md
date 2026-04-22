@@ -81,3 +81,8 @@ If you prefer to create the dashboard programmatically from your terminal, run t
 gcloud monitoring dashboards create \
     --config-from-file="dashboard/notebooklm_adoption_and_usage.json"
 ```
+
+## Example Dashboard
+Here is an example of a generated Dashboard created from this pipeline:
+
+![NotebookLM Workflow Dashboard example](images/dashboard.png)
