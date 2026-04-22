@@ -1,7 +1,7 @@
 # Guide: Building a NotebookLM Utilization Dashboard
 
 > [!NOTE]  
-> This example leverages metrics from the **Standard API Usage / Quota Tracking** to filter and dashboard Discovery Engine and NotebookLM activity logs.
+> This example leverages metrics from the **Standard API Usage / Quota Tracking** to filter and dashboard selected NotebookLM activity logs.
 
 
 ## Summary
