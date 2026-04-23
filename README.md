@@ -38,11 +38,11 @@ To deploy this infrastructure, you need the following permissions:
 You must explicitly tell the Discovery Engine to log request/response metadata. Replace the placeholders in the command below:
 
 ```bash
-curl -X PATCH \
-  -H "Authorization: Bearer $(gcloud auth print-access-token)" \
-  -H "Content-Type: application/json" \
-  "https://[ENDPOINT]-discoveryengine.googleapis.com/v1alpha/projects/[PROJECT_ID]/locations/[LOCATION]/collections/default_collection/engines/[APP_ID]?updateMask=observabilityConfig" \
-  -d '{ "observabilityConfig": { "observabilityEnabled": true, "sensitiveLoggingEnabled": true } }'
+curl -X PATCH
+-H Authorization: Bearer $(gcloud auth print-access-token)" \
+-H "Content-Type: application/json" \
+-H "X-Goog-User-Project: $(gcloud config get-value project)" \
+"https://global-discoveryengine.googleapis.com/v1alpha/projects/$(gcloud config get-value project)?updateMask=customerProvidedConfig.notebooklmConfig.observabilityConfig" -d '{"customerProvidedConfig": {"notebooklmConfig": {"observabilityConfig": {"observabilityEnabled": true, "sensitiveLoggingEnabled": true}}}}
 ```
 
 ### Step 2: Create the Analytics Bucket
