@@ -71,8 +71,7 @@ gcloud logging sinks create notebooklm-usage-sink \
 3. In the top-right of the builder layout, click the **JSON editor** icon (`{ }`).
 4. Clear the default layout, paste the contents of the `dashboard/notebooklm_adoption_and_usage.json` file, and click **Apply**.
 
-> [!IMPORTANT]  
-> After importing, you must review the imported widgets with SQL queries and swap the placeholder analytics table paths (e.g., `` `genai-whitlstd-rcf.global.notebooklm-activity-bucket._AllLogs` ``) with your actual project names layout.
+> After importing, you must review the imported widgets with SQL queries and swap the placeholder analytics table paths (e.g., `` `<project_id>.<location>.notebooklm-activity-bucket._AllLogs` ``) with your actual project names layout.
 
 ### Alternative: Deploy via Command Line (gcloud CLI)
 If you prefer to create the dashboard programmatically from your terminal, run this from the workspace directory:
